@@ -848,7 +848,8 @@ typedef struct x264_image_properties_t
     double f_psnr_avg;
     /* Out: PSNR of Y, U, and V (if x264_param_t.b_psnr is set) */
     double f_psnr[3];
-
+    /* Out:  f_qp_avg_aq takes from recostracted frame */
+    double   f_qp_avg_aq; /* QPs as decided by AQ in addition to ratecontrol */
     /* Out: Average effective CRF of the encoded frame */
     double f_crf_avg;
 } x264_image_properties_t;

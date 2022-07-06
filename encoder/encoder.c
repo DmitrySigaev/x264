@@ -3980,6 +3980,7 @@ static int encoder_frame_end( x264_t *h, x264_t *thread_current,
 
     pic_out->hrd_timing = h->fenc->hrd_timing;
     pic_out->prop.f_crf_avg = h->fdec->f_crf_avg;
+    pic_out->prop.f_qp_avg_aq = h->fdec->f_qp_avg_aq;
 
     /* Filler in AVC-Intra mode is written as zero bytes to the last slice
      * We don't know the size of the last slice until encapsulation so we add filler to the encapsulated NAL */
